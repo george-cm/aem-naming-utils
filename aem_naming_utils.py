@@ -55,3 +55,15 @@ class AemNamingUtils:
         if matchgroup:
             return True
         return False
+
+    def create_proper_url(self, prefix: str, product_name: str, product_primary_category: str) -> str:
+        """Takes multiple strings and creates a proper AEM url.
+        product_name seems to be the English US product name from PIM regardless of the region/language.
+        """
+        _, primary_category = product_primary_category.split(" - ", 1)
+        primary_category = primary_category.replace("&", "and")
+        primary_categories = primary_category.split("-->")
+        primary_categories.append(product_name)
+        proper_primary_categories = [self.create_proper_name(el) for el in primary_categories]
+        url = prefix.lstrip("/") + "/" + "/".join(proper_primary_categories)
+        return url
