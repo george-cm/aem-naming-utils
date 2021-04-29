@@ -65,5 +65,5 @@ class AemNamingUtils:
         primary_categories = primary_category.split("-->")
         primary_categories.append(product_name)
         proper_primary_categories = [self.create_proper_name(el) for el in primary_categories]
-        url = prefix.lstrip("/") + "/" + "/".join(proper_primary_categories)
+        url = prefix.rstrip("/") + "/" + "/".join(proper_primary_categories)
         return url

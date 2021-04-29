@@ -42,9 +42,9 @@ class TestCreateProperUrl:
         'prefix, product_name, product_primary_category, url', 
         [
             ("https://sps.honeywell.com/us/en/products", "T Handle Adapter", "AEM-SFT-3004 - Safety-->Electrical Safety-->Grounding Equipment", "https://sps.honeywell.com/us/en/products/safety/electrical-safety/grounding-equipment/t-handle-adapter"),
-            ("https://sps.honeywell.com/us/en/products", "1-inch Series", "DSIT-01100 - Sensing & IOT-->Sensors-->Motion & Position Sensors-->Resolvers", "https://sps.honeywell.com/us/en/products/sensing-and-iot/sensors/motion-and-position-sensors/resolvers/1-inch-series"),
+            ("https://sps.honeywell.com/us/en/products/", "1-inch Series", "DSIT-01100 - Sensing & IOT-->Sensors-->Motion & Position Sensors-->Resolvers", "https://sps.honeywell.com/us/en/products/sensing-and-iot/sensors/motion-and-position-sensors/resolvers/1-inch-series"),
             ("https://sps.honeywell.com/us/en/products", "Voyager 1200g General Duty Scanner", "IPH00108 - Productivity-->Barcode Scanners-->General Purpose Handheld", "https://sps.honeywell.com/us/en/products/productivity/barcode-scanners/general-purpose-handheld/voyager-1200g-general-duty-scanner"),
-            ("https://sps.honeywell.com/mx/es/products", "Voyager 1200g General Duty Scanner", "IPH00108 - Productivity-->Barcode Scanners-->General Purpose Handheld", "https://sps.honeywell.com/mx/es/products/productivity/barcode-scanners/general-purpose-handheld/voyager-1200g-general-duty-scanner"),
+            ("https://sps.honeywell.com/mx/es/products/", "Voyager 1200g General Duty Scanner", "IPH00108 - Productivity-->Barcode Scanners-->General Purpose Handheld", "https://sps.honeywell.com/mx/es/products/productivity/barcode-scanners/general-purpose-handheld/voyager-1200g-general-duty-scanner"),
         ])
 
     def test_create_proper_url(self, prefix, product_name, product_primary_category, url):
